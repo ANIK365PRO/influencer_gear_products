@@ -108,6 +108,17 @@ header ul li {
   width: calc(100% - 120px);
   object-fit: contain;
 }
+main {
+  max-width: 1150px;
+}
+.image_container {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: rgb(4, 30, 66);
+}
 
 /* responsive for Mobile device */
 @media screen and (max-width: 576px) {
@@ -128,5 +139,11 @@ header ul li {
   }
   .common_btn {
     margin: 0 auto;
+  }
+}
+/* responsive for tablate */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .heading_h1_style {
+    font-size: 2.24em;
   }
 }
