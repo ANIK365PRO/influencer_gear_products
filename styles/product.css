@@ -6,6 +6,9 @@
   font-style: normal;
 }
 /* common shared style  */
+.hide {
+  display: none;
+}
 .heading_h1_style {
   font-weight: 700;
   font-size: 3.25em;
@@ -20,16 +23,18 @@
   font-weight: 600;
   font-size: 1.75em;
   color: rgb(10, 8, 38);
+  text-align: center;
 }
 .heading_h4_style {
   font-weight: 500;
   font-size: 1.75em;
   color: rgb(24, 25, 31);
 }
-.heading_h4_style {
+.heading_h5_style {
   font-size: 1.5em;
   color: rgba(0, 0, 0, 0.87);
 }
+
 .black_p {
   font-weight: 600;
   font-size: 1em;
@@ -82,7 +87,7 @@ header ul li {
   min-height: 422px;
   justify-content: center;
   align-items: center;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 }
 .head_left {
   width: 50%;
@@ -110,16 +115,55 @@ header ul li {
 }
 main {
   max-width: 1150px;
+  margin: 0 auto;
 }
 .image_container {
-  height: 100px;
+  min-height: 100px;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
   gap: 20px;
   color: rgb(4, 30, 66);
+  margin: 50px 0;
 }
-
+/* card section */
+#card_section {
+  margin: 0 auto;
+}
+.card_container {
+  min-height: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: 2px solid rgb(43, 122, 232); */
+  gap: 50px;
+  padding: 2.5em;
+  margin: 0 auto;
+}
+.card {
+  margin: 0 auto;
+  padding: 2em;
+  border-radius: 5px;
+  /* width: 292px; */
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  background: rgb(255, 255, 255);
+  /* border: 2px solid aqua; */
+}
+figure img {
+  width: 100%;
+}
+.card_container .star {
+  color: rgb(251, 130, 0);
+  font-weight: bold;
+  font-size: 20px;
+}
+.card_container .ratting {
+  color: rgb(94, 99, 102);
+  font-size: 20px;
+  font-weight: 700;
+}
 /* responsive for Mobile device */
 @media screen and (max-width: 576px) {
   .hero {
@@ -140,10 +184,19 @@ main {
   .common_btn {
     margin: 0 auto;
   }
+
+  .card_container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
 }
 /* responsive for tablate */
 @media screen and (min-width: 576px) and (max-width: 992px) {
   .heading_h1_style {
     font-size: 2.24em;
+  }
+  .card_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }
