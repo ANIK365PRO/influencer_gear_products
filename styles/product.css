@@ -164,6 +164,33 @@ figure img {
   font-size: 20px;
   font-weight: 700;
 }
+.gear {
+  min-height: 270px;
+  border: 1px solid magenta;
+  display: flex;
+  gap: 6em;
+  align-items: center;
+  justify-content: center;
+}
+.gear div {
+  width: calc(50% - 6em);
+  border: 1px solid red;
+}
+.gear div img {
+  width: 100%;
+  object-fit: cover;
+}
+.gear aside {
+  width: 50%;
+  display: grid;
+  gap: 1em;
+  /* object-fit: cover; */
+  padding: 50px;
+  border: 1px solid red;
+}
+.gear aside button {
+  width: 50%;
+}
 /* responsive for Mobile device */
 @media screen and (max-width: 576px) {
   .hero {
@@ -189,6 +216,20 @@ figure img {
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
   }
+  .gear {
+    flex-direction: column-reverse;
+    gap: 2em;
+    text-align: center;
+  }
+  .gear div {
+    width: 100%;
+  }
+  .gear aside {
+    width: 100%;
+  }
+  .gear aside h2 {
+    font-size: larger;
+  }
 }
 /* responsive for tablate */
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -198,5 +239,18 @@ figure img {
   .card_container {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+  }
+  .gear {
+    gap: 2em;
+    margin: 0 auto;
+  }
+  .gear div {
+    width: 100%;
+  }
+  .gear aside {
+    width: 100%;
+  }
+  .gear aside h2 {
+    font-size: larger;
   }
 }
